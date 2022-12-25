@@ -81,7 +81,7 @@ main > * {
 .sideImg {
 	max-height: 65vh;
 	min-height: 250px;
-    /* height: 100%; */
+	/* height: 100%; */
 	/* min-width: 405px; */
 }
 
@@ -176,9 +176,9 @@ footer > a:hover {
 	}
 
 	.sideImg {
-		/* min-height: auto; */
-        /* max-height: auto; */
-        /* height: 100px; */
+		min-height: auto;
+		/* max-height: auto; */
+		/* height: 100px; */
 		/* height: fit-content; */
 		/* max-height: 300px; */
 		/* width: 50vw; */
@@ -191,7 +191,147 @@ footer > a:hover {
 		text-align: center;
 	}
 
-    .sideText h2 {
-        font-size: 1.5rem;
-    }
+	.sideText h2 {
+		font-size: 1.5rem;
+	}
+}
+
+/* register popup form */
+.popUpBG {
+	position: absolute;
+	top: 0;
+	background-color: rgba(50, 50, 50, 0.5);
+	height: 100%;
+	width: 100vw;
+	z-index: 1;
+}
+
+.popUp {
+	position: absolute;
+	top: 50vh;
+	transform: translateY(-50%);
+	background-color: var(--violet);
+	/* height: 400px; */
+	/* width: 300px; */
+	z-index: 2;
+}
+
+#popUpToggle:checked ~ .popUpBG,
+#popUpToggle:checked ~ .popUp {
+	display: none;
+}
+
+#popUpToggle {
+	display: none;
+	/* z-index: 5; */
+}
+
+.FormBox {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	/* color: red; */
+	/* border: ; */
+	border-radius: 10px;
+	width: 29rem;
+	height: 34rem;
+	justify-content: space-between;
+	padding: 1.2rem;
+	margin: 10px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.FormBox h1 {
+	font-size: 1.5rem;
+}
+
+.FormBox h3 {
+	font-size: 1rem;
+	font-weight: normal;
+	color: #bbb;
+}
+
+.FormBox hr {
+	width: calc(100% + ((1.2rem) * 2));
+	align-self: center;
+	border-color: rgba(187, 187, 187, 0.5);
+}
+
+.FormBox .FormLineStyle .InputText {
+	background-color: var(--softMagenta);
+	padding: 0.5em;
+	border-radius: 0.5em;
+	border-color: var(--satMagenta);
+	border-style: solid;
+	border-width: 1px;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.FormBox .FormLineStyle .InputText::placeholder {
+	color: #555;
+}
+
+.FormBox .FormLineStyle .InputText:focus {
+	outline: none;
+}
+
+.FormBox p {
+	font-size: 0.8rem;
+	color: #bbb;
+}
+
+.FormBox a {
+	/* font-size: 1em; */
+	color: #eee;
+}
+
+.FormBox select {
+	padding: 0.5em;
+	border-radius: 0.5em;
+	border-color: var(--satMagenta);
+	background-color: rgba(0, 0, 0, 0.2);
+	border-style: solid;
+	border-width: 1px;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.FormBox .radiobox {
+	padding: 0.5em;
+	border-radius: 0.5em;
+	border-color: var(--satMagenta);
+	background-color: rgba(0, 0, 0, 0.2);
+	border-style: solid;
+	border-width: 1px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5em;
+	width: 100%;
+	accent-color: var(--satMagenta);
+}
+
+.FormBox .radiobox input {
+	height: 1.1em;
+	width: 1.1em;
+}
+
+.FormLineStyle {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em;
+}
+
+.SubmitForm {
+	width: 11em;
+	align-self: center;
+	border-radius: 0.5em;
+	border-width: 0;
+	background-color: var(--satMagenta);
+	letter-spacing: 1px;
+	padding: 0.5em;
+	color: white;
+	font-weight: bold;
+	box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.5);
 }
