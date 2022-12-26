@@ -233,7 +233,7 @@ footer > a:hover {
 	/* color: red; */
 	/* border: ; */
 	border-radius: 10px;
-	width: 29rem;
+	width: 31rem;
 	height: 34rem;
 	justify-content: space-between;
 	padding: 1.2rem;
@@ -284,6 +284,14 @@ footer > a:hover {
 .FormBox a {
 	/* font-size: 1em; */
 	color: #eee;
+}
+
+.FormBox select option {
+	background-color: var(--violet);
+}
+
+.FormBox select:focus {
+	outline: none;
 }
 
 .FormBox select {
