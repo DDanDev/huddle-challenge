@@ -197,23 +197,62 @@ footer > a:hover {
 }
 
 /* register popup form */
+.popUpContainer {
+	position: absolute;
+	top: 0;
+	min-height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.closePopUp {
+	position: absolute;
+	right: 1.2rem;
+	top: 1.2rem;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: opacity(0.5);
+}
+
+.closePopUp > div {
+	background-color: rgba(187, 187, 187, 1);
+	height: 3px;
+	border-radius: 10px;
+	width: 2rem;
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.closePopUp > div:nth-child(1) {
+	transform: rotate(-45deg);
+}
+
 .popUpBG {
 	position: absolute;
 	top: 0;
 	background-color: rgba(50, 50, 50, 0.5);
 	height: 100%;
 	width: 100vw;
-	z-index: 1;
+	z-index: 0;
+	pointer-events: all;
 }
 
 .popUp {
-	position: absolute;
-	top: 50vh;
-	transform: translateY(-50%);
+	position: relative;
+	/* top: 0; */
+	/* transform: translateY(max(0vh, calc(50vh - 50%))); */
 	background-color: var(--violet);
 	/* height: 400px; */
 	/* width: 300px; */
-	z-index: 2;
+	z-index: 4;
+	pointer-events: all;
 }
 
 #popUpToggle:checked ~ .popUpBG,
@@ -226,27 +265,45 @@ footer > a:hover {
 	/* z-index: 5; */
 }
 
+.FormBox ::-webkit-scrollbar {
+	width: 8px;
+	background-color: var(--violet);
+	/* backdrop-filter: ; */
+}
+
+.FormBox ::-webkit-scrollbar-thumb {
+	background-color: var(--satMagenta);
+	border-radius: 5px;
+}
+
 .FormBox {
 	display: flex;
 	flex-direction: column;
+	gap: 0.5rem;
 	/* align-items: center; */
 	/* color: red; */
 	/* border: ; */
 	border-radius: 10px;
-	width: 31rem;
-	height: 34rem;
+	max-width: 26rem;
+	min-height: 34rem;
 	justify-content: space-between;
 	padding: 1.2rem;
 	margin: 10px;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 360px) {
+	.FormBox {
+		font-size: 15px;
+	}
+}
+
 .FormBox h1 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 }
 
 .FormBox h3 {
-	font-size: 1rem;
+	font-size: 1em;
 	font-weight: normal;
 	color: #bbb;
 }
@@ -265,7 +322,7 @@ footer > a:hover {
 	border-style: solid;
 	border-width: 1px;
 	width: 100%;
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 .FormBox .FormLineStyle .InputText::placeholder {
@@ -277,7 +334,7 @@ footer > a:hover {
 }
 
 .FormBox p {
-	font-size: 0.8rem;
+	font-size: 0.8em;
 	color: #bbb;
 }
 
@@ -286,7 +343,7 @@ footer > a:hover {
 	color: #eee;
 }
 
-.FormBox select option {
+.FormBox select * {
 	background-color: var(--violet);
 }
 
@@ -302,7 +359,7 @@ footer > a:hover {
 	border-style: solid;
 	border-width: 1px;
 	width: 100%;
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 .FormBox .radiobox {
@@ -315,14 +372,22 @@ footer > a:hover {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	justify-content: center;
 	gap: 0.5em;
 	width: 100%;
 	accent-color: var(--satMagenta);
 }
+.FormBox .radiobox:hover {
+	background-color: var(--softMagenta);
+}
+.FormBox input[type="radio"]:checked + .radiobox {
+	background-color: var(--satMagenta);
+}
 
-.FormBox .radiobox input {
-	height: 1.1em;
-	width: 1.1em;
+.FormBox input[type="radio"] {
+	display: none;
+	/* height: 1.1em; */
+	/* width: 1.1em; */
 }
 
 .FormLineStyle {
