@@ -222,10 +222,10 @@ footer > a:hover {
 
 .closePopUp {
 	position: absolute;
-	right: 1.2rem;
-	top: 1.2rem;
-	width: 2rem;
-	height: 2rem;
+	right: 0.35rem;
+	top: 0.3rem;
+	width: 1.2rem;
+	height: 1.2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -236,7 +236,7 @@ footer > a:hover {
 	background-color: rgba(187, 187, 187, 1);
 	height: 3px;
 	border-radius: 10px;
-	width: 2rem;
+	width: 1.4rem;
 	transform: rotate(45deg);
 	position: absolute;
 }
@@ -255,17 +255,6 @@ footer > a:hover {
 	pointer-events: all;
 }
 
-.popUp {
-	position: relative;
-	/* top: 0; */
-	/* transform: translateY(max(0vh, calc(50vh - 50%))); */
-	background-color: var(--violet);
-	/* height: 400px; */
-	/* width: 300px; */
-	z-index: 4;
-	pointer-events: all;
-}
-
 #popUpToggle:checked ~ .popUpBG,
 #popUpToggle:checked ~ .popUp {
 	display: none;
@@ -280,7 +269,6 @@ footer > a:hover {
 	width: 5px;
 	background-color: var(--violet);
 	border-radius: 5px;
-	/* backdrop-filter: ; */
 }
 
 .popUpContainer ::-webkit-scrollbar-thumb {
@@ -288,24 +276,39 @@ footer > a:hover {
 	border-radius: 5px;
 }
 
+.popUp {
+	position: fixed;
+	/* top: 0; */
+	/* transform: translateY(max(0vh, calc(50vh - 50%))); */
+	background-color: var(--violet);
+	/* height: 400px; */
+	/* width: 300px; */
+	z-index: 4;
+	pointer-events: all;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	/* padding: 1.2rem; */
+	border-radius: 10px;
+}
+
 .FormBox {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	gap: 0.6rem;
 	/* align-items: center; */
 	/* color: red; */
 	/* border: ; */
-	border-radius: 10px;
-	max-width: 26rem;
 	/* min-height: 34rem; */
 
-	max-height: 90vh;
+	/* height: 50vh; */
+
+	max-height: calc(100vh - 1.2rem - 1.2rem - 10vh);
 	overflow-y: auto;
 
-	justify-content: space-between;
-	padding: 1.2rem;
-	margin: 10px;
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	max-width: min(26rem, calc(100vw - 0.1rem - 0.1rem - 5vw));
+
+	margin: 1.2rem 0.1rem;
+	padding: 0 1.1rem;
 }
 
 .FormBox > * {
@@ -318,7 +321,7 @@ footer > a:hover {
 
 @media (max-width: 360px) {
 	.FormBox {
-		font-size: 15px;
+		font-size: 14px;
 	}
 }
 
@@ -384,6 +387,7 @@ footer > a:hover {
 	border-width: 1px;
 	width: 100%;
 	font-size: 1em;
+	text-align: center;
 }
 
 .FormBox .radiobox {
@@ -431,4 +435,5 @@ footer > a:hover {
 	color: white;
 	font-weight: bold;
 	box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.5);
+	margin-bottom: calc(1px + 5px);
 }
