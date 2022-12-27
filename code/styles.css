@@ -181,18 +181,6 @@ footer > a:hover {
 }
 
 /* register popup form */
-.popUpContainer {
-	position: absolute;
-	top: 0;
-	min-height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	pointer-events: none;
-}
-
 .closePopUp {
 	position: absolute;
 	right: 0.35rem;
@@ -225,7 +213,6 @@ footer > a:hover {
 	height: 100vh;
 	width: 100vw;
 	z-index: 0;
-	pointer-events: all;
 }
 
 #popUpToggle:checked ~ .popUpBG,
@@ -237,22 +224,24 @@ footer > a:hover {
 	display: none;
 }
 
-.popUpContainer ::-webkit-scrollbar {
+.popUp ::-webkit-scrollbar {
 	width: 5px;
 	background-color: var(--violet);
 	border-radius: 5px;
 }
 
-.popUpContainer ::-webkit-scrollbar-thumb {
+.popUp ::-webkit-scrollbar-thumb {
 	background-color: var(--satMagenta);
 	border-radius: 5px;
 }
 
 .popUp {
 	position: fixed;
+	top: 0;
+	transform: translateY(calc(50vh - 50%));
+
 	background-color: var(--violet);
 	z-index: 4;
-	pointer-events: all;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 }
@@ -263,7 +252,7 @@ footer > a:hover {
 	justify-content: space-between;
 	gap: 0.6rem;
 
-	max-height: calc(100vh - 1.2rem - 1.2rem - 10vh);
+	max-height: calc(100vh - 1.2rem - 1.2rem - 7vh);
 	overflow-y: auto;
 
 	max-width: min(26rem, calc(100vw - 0.1rem - 0.1rem - 5vw));
