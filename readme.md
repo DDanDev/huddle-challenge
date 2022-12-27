@@ -20,7 +20,3 @@ This is a solution to the [Huddle landing page with single introductory section 
 2- On short screen height, the popup form should still have the proper padding at top and bottom, so the contents are not displayed all the way to the very ends of the vertical axis.
 
 1 and 2 can be fixed by a little bit of refactoring and having everything inside a smaller container inside the popup window. So the contents are scrolled instead of the entire popup, and the overflow hiding happens at the inner edges.
-
-3- On very weird screen resolutions (not-too-short width and short height e.g. 780 x 520) main page's image is cropping, when it should scale its width to fit the height. Or at least expand its container's height to fit.
-
-4- quick fix: allow overflow at the bottom of main so it doesn't crop "Register" button's shadow

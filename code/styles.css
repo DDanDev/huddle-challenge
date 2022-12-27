@@ -69,9 +69,10 @@ main {
 	max-width: var(--maxPageWidth);
 	width: 100%;
 	display: flex;
-	/* align-items: center; */
+	align-items: center;
 	/* flex-wrap: wrap; */
 	/* gap: 3em; */
+	/* overflow: visible; */
 }
 
 main > * {
@@ -80,8 +81,12 @@ main > * {
 
 .sideImg {
 	max-height: 65vh;
-	min-height: 250px;
-	/* height: 100%; */
+	min-height: 258px;
+	display: flex;
+	align-items: center;
+	height: 10000px;
+	width: 10000px;
+	max-width: 100%;
 	/* min-width: 405px; */
 }
 
@@ -120,6 +125,7 @@ main > * {
 	color: var(--violet);
 	border-radius: 1.5rem;
 	box-shadow: 0.2rem 0.3rem 0.5rem rgba(50, 50, 50, 0.5);
+	margin-bottom: calc(0.3rem + 0.5rem);
 }
 
 .sideText .link:hover {
@@ -176,12 +182,17 @@ footer > a:hover {
 	}
 
 	.sideImg {
-		min-height: auto;
-		/* max-height: auto; */
-		/* height: 100px; */
+		/* min-height: 250px; */
+		/* max-height: 65vh; */
+		/* height: 1000px; */
+		flex: 1 1 0;
 		/* height: fit-content; */
 		/* max-height: 300px; */
 		/* width: 50vw; */
+	}
+
+	.sideImg img {
+		object-position: bottom;
 	}
 
 	.sideText > div {
@@ -287,10 +298,10 @@ footer > a:hover {
 	border-radius: 10px;
 	max-width: 26rem;
 	/* min-height: 34rem; */
-	
+
 	max-height: 90vh;
 	overflow-y: auto;
-	
+
 	justify-content: space-between;
 	padding: 1.2rem;
 	margin: 10px;
@@ -301,8 +312,8 @@ footer > a:hover {
 	flex-shrink: 0;
 }
 
-.FormBox  * {
-overflow: visible;
+.FormBox * {
+	overflow: visible;
 }
 
 @media (max-width: 360px) {
