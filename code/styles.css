@@ -110,6 +110,8 @@ main > * {
 	border-radius: 1.5rem;
 	box-shadow: 0.2rem 0.3rem 0.5rem rgba(50, 50, 50, 0.5);
 	margin-bottom: calc(0.3rem + 0.5rem);
+
+	cursor: pointer;
 }
 
 .sideText .link:hover {
@@ -129,6 +131,8 @@ footer {
 footer > a {
 	border: solid currentColor 1.5px;
 	border-radius: 50%;
+
+	cursor: pointer;
 }
 
 footer svg {
@@ -383,4 +387,6 @@ footer > a:hover {
 	font-weight: bold;
 	box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.5);
 	margin-bottom: calc(1px + 5px);
+
+	cursor: pointer;
 }
