@@ -14,18 +14,12 @@
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	/* font-size: 19px; */
-	/* flex-shrink: 0; */
 	font-family: "Open Sans", sans-serif;
 	color: #ffffff;
 }
 
 body * {
 	overflow: hidden;
-}
-
-a {
-	/* color: inherit; */
 }
 
 img,
@@ -70,9 +64,6 @@ main {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	/* flex-wrap: wrap; */
-	/* gap: 3em; */
-	/* overflow: visible; */
 }
 
 main > * {
@@ -87,19 +78,13 @@ main > * {
 	height: 10000px;
 	width: 10000px;
 	max-width: 100%;
-	/* min-width: 405px; */
 }
 
 .sideImg img {
 	object-position: right;
 }
 
-.sideText {
-	/* min-width: 405px; */
-}
-
 .sideText > div {
-	/* min-width: 405px; */
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
@@ -115,7 +100,6 @@ main > * {
 .sideText .link {
 	width: 10rem;
 	height: 3rem;
-	/* font-size: 0.85rem; */
 
 	display: flex;
 	justify-content: center;
@@ -149,7 +133,6 @@ footer > a {
 
 footer svg {
 	padding: 25%;
-	/* color: inherit; */
 }
 
 footer > a:hover *,
@@ -169,10 +152,6 @@ footer > a:hover {
 		background-position: top;
 	}
 
-	header img {
-		/* object-position: center; */
-	}
-
 	main {
 		flex-direction: column;
 	}
@@ -182,13 +161,7 @@ footer > a:hover {
 	}
 
 	.sideImg {
-		/* min-height: 250px; */
-		/* max-height: 65vh; */
-		/* height: 1000px; */
 		flex: 1 1 0;
-		/* height: fit-content; */
-		/* max-height: 300px; */
-		/* width: 50vw; */
 	}
 
 	.sideImg img {
@@ -262,7 +235,6 @@ footer > a:hover {
 
 #popUpToggle {
 	display: none;
-	/* z-index: 5; */
 }
 
 .popUpContainer ::-webkit-scrollbar {
@@ -278,15 +250,10 @@ footer > a:hover {
 
 .popUp {
 	position: fixed;
-	/* top: 0; */
-	/* transform: translateY(max(0vh, calc(50vh - 50%))); */
 	background-color: var(--violet);
-	/* height: 400px; */
-	/* width: 300px; */
 	z-index: 4;
 	pointer-events: all;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-	/* padding: 1.2rem; */
 	border-radius: 10px;
 }
 
@@ -295,12 +262,6 @@ footer > a:hover {
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 0.6rem;
-	/* align-items: center; */
-	/* color: red; */
-	/* border: ; */
-	/* min-height: 34rem; */
-
-	/* height: 50vh; */
 
 	max-height: calc(100vh - 1.2rem - 1.2rem - 10vh);
 	overflow-y: auto;
@@ -366,7 +327,6 @@ footer > a:hover {
 }
 
 .FormBox a {
-	/* font-size: 1em; */
 	color: #eee;
 }
 
@@ -414,8 +374,6 @@ footer > a:hover {
 
 .FormBox input[type="radio"] {
 	display: none;
-	/* height: 1.1em; */
-	/* width: 1.1em; */
 }
 
 .FormLineStyle {
